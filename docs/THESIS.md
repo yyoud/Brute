@@ -116,16 +116,21 @@ Let the keyboard be a coordinate system, the origin being the first char of the 
 Let $M(d, C)$ be a domain-relative vector preset map (assuming qwerty keyboard), where d is the domain, and C is the character.
 
 For each character $P_i$: \
-Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain $P_i$: \
+Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain $P_i$: 
+
 $$v_i = M(P_i, P_{i+1})$$
 
 let $L = length(P)$ \
 let $V_T$ be the net displacement. \
+
 $$V_T = \sum_{i=0}^{L-1}(v_i)$$
 
-The slope of which cancels nicely to: \
-$$m_{V_T} = \frac{y_{P_L}}{x_{P_L}}$$ \
-Then resulting in the discriminant: \
+The slope of which cancels nicely to: 
+
+$$m_{V_T} = \frac{y_{P_L}}{x_{P_L}}$$ 
+
+Then resulting in the discriminant: 
+
 $$y'(p_i) = m_{V_T} \times x_{p_i}-y_{p_i}$$
 
 To calculate the linearity of the pattern, we need to calculate the **Displacement-Normalized Area (DNA)**, which is
