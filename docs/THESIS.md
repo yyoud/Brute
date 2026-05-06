@@ -121,7 +121,7 @@ Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain 
 $$v_i = M(P_i, P_{i+1})$$
 
 let $L = length(P)$ \
-let $V_T$ be the net displacement. \
+let $V_T$ be the net displacement.
 
 $$V_T = \sum_{i=0}^{L-1}(v_i)$$
 
