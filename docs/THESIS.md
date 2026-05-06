@@ -82,7 +82,7 @@ in the password.
 
 That being said, it CANNOT be used independently, since it doesn't magnify character order at all.
 
-The formula for binary shannon entropy is:
+The formula for binary shannon entropy is: \
 $$H= -\sum_{i=0}^{L-1} p(P_i) \times log_2(p(P_i))$$
 
 Where: \
@@ -120,12 +120,12 @@ Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain 
 $$v_i = M(P_i, P_{i+1})$$
 
 let $L = length(P)$ \
-let $V_T$ be the net displacement.
+let $V_T$ be the net displacement. \
 $$V_T = \sum_{i=0}^{L-1}(v_i)$$
 
-The slope of which cancels nicely to:
-$$m_{V_T} = \frac{y_{P_L}}{x_{P_L}}$$
-Then resulting in the discriminant:
+The slope of which cancels nicely to: \
+$$m_{V_T} = \frac{y_{P_L}}{x_{P_L}}$$ \
+Then resulting in the discriminant: \
 $$y'(p_i) = m_{V_T} \times x_{p_i}-y_{p_i}$$
 
 To calculate the linearity of the pattern, we need to calculate the **Displacement-Normalized Area (DNA)**, which is
