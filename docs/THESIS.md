@@ -82,7 +82,8 @@ in the password.
 
 That being said, it CANNOT be used independently, since it doesn't magnify character order at all.
 
-The formula for binary shannon entropy is: \
+The formula for binary shannon entropy is: 
+
 $$H= -\sum_{i=0}^{L-1} p(P_i) \times log_2(p(P_i))$$
 
 Where: \
@@ -113,31 +114,37 @@ I propose a way to efficiently detect such patterns, as well as their linearity:
 **Geometrical Spatial Analysis**.
 
 Let the keyboard be a coordinate system, the origin being the first char of the passsword $P_0$. \
-Let $M(d, C)$ be a domain-relative vector preset map (assuming qwerty keyboard), where d is the domain, and C is the character.
+Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty keyboard), 
+where d is the domain, and C is the character.
 
 For each character $P_i$: \
 Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain $P_i$: 
 
-$$v_i = M(P_i, P_{i+1})$$
+$$\vec{v_i} = M(P_i, P_{i+1})$$
 
 let $L = length(P)$ \
-let $V_T$ be the net displacement.
+let $\vec{V_T}$ be the net displacement.
 
-$$V_T = \sum_{i=0}^{L-1}(v_i)$$
+$$\vec{V_T} = \sum_{i=0}^{L-1}(\vec{v_i})$$
 
 The slope of which cancels nicely to: 
 
-$$m_{V_T} = \frac{y_{P_L}}{x_{P_L}}$$ 
+$$m_{\vec{V_T}} = \frac{y_{P_L}}{x_{P_L}}$$ 
+
+let:
+
+$$\vec{u}=\frac{\vec{V_T}}{\lvert\vec{V_T}\lvert}$$
+be the normalized closure direction.
 
 Then resulting in the discriminant: 
 
-$$y'(p_i) = m_{V_T} \times x_{p_i}-y_{p_i}$$
+$$y'(\vec{v_i}) = m_{\vec{V_T}} \times x_{v_i}-y_{v_i}$$
 
 To calculate the linearity of the pattern, we need to calculate the **Displacement-Normalized Area (DNA)**, which is
 the sum of the absolute values of all the $V_T$ relative 
 areas trapped in the piecewise-linear loop we have.
 To do this, we can use the **Shoelace Formula**:
 
-$$DNA(P)=\frac{1}{2}\sum_{i=0}^{L-1}(\lvert x_{P_i} \times y'_{P_{i+1}} - x_{P_{i+1}} \times y'_{P_i} \lvert)$$
+$$DNA(P^*)=\frac{1}{2}\sum_{i=0}^{L-1}(\lvert x_{P_i} \times y'_{P_{i+1}} - x_{P_{i+1}} \times y'_{P_i} \lvert) $$
 
 
