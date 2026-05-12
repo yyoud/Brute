@@ -74,6 +74,10 @@ For each type of repeating token, the enum value will be the same as the non-rep
 # Data analysis using the token list
 In order to extract entropy from the token list, we use a couple of methods (which will come together at the end result).
 
+### Terms:
+1. $P$ refers to the **password text**.
+2. $P^*$ refers to the **Tokenized password**.
+
 ## Shannon entropy
 [Shannon entropy](https://en.wikipedia.org/wiki/Entropy_(information_theory))
 is a formula from information theory, designed to give an orderless entropy index.
@@ -87,19 +91,19 @@ The formula for binary shannon entropy is:
 $$H= -\sum_{i=0}^{L-1} p(P_i) \times log_2(p(P_i))$$
 
 Where: \
-$p(P_i)$ is the probability of token $P_i$ in the given text.
+$\displaystyle p(P^*_i)$ is the probability of token $\displaystyle P^*_i$ in the given text.
 
 ### Diversity
 the diversity of a certain character field in a text, is calculated
 via the [Enum value](../src/tokenization/enum.py) of the token.
 The probability is taken on the [Enum value](../src/tokenization/enum.py) in this case.
-We mark the diversity as $D(p)$.
+We mark the diversity as $\displaystyle D(P^*)$.
 
-### Orderless Entropy Index (OED)
+### Orderless Entropy Index (OEI)
 The Orderless Entropy Index, is the shannon entropy taken on each token's raw value.
 The probability is taken by iterating once over the token list, and counting the occurrence of
 each token value.
-It shall be marked as $\displaystyle OED(P^*)$.
+It shall be marked as $\displaystyle OEI(P)$.
 
 <!--
 i need to do this on the token types (enum) and the token values. also i need to start calculating costs.
@@ -130,15 +134,16 @@ $$\vec{V_T} = \sum_{i=0}^{L-1}(\vec{v_i})$$
 The slope of which cancels nicely to: 
 
 $$m_{\vec{V_T}} = \frac{y_{P_L}}{x_{P_L}}$$ 
+Then using it to convey the location of each point
 
-let:
+Let:
 
 $$\vec{u}=\frac{\vec{V_T}}{\lvert\vec{V_T}\lvert}$$
 be the normalized closure direction.
 
 Then resulting in the discriminant: 
 
-$$y'(\vec{v_i}) = m_{\vec{V_T}} \times x_{v_i}-y_{v_i}$$
+$$y'(\vec{v_i}) = m_{\vec{V_T}} \times x_{v_i}-y_{v_i} $$
 
 To calculate the linearity of the pattern, we need to calculate the **Displacement-Normalized Area (DNA)**, which is
 the sum of the absolute values of all the $V_T$ relative 
