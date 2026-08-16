@@ -121,7 +121,7 @@ Let the keyboard be a coordinate system over $\mathbb{Z_n}$the origin being the 
 Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty keyboard), 
 where d is the domain, and C is the character.
 
-$$M^P_n: {(P_i,P_{i+1} | i \in \mathbb{Z_n}} \rightarrow {(a,b)|a,b \in \{-1, 1, 0\}$$
+$$M^P_n: {(P_i,P_{i+1}) | i \in \mathbb{Z}_n} \rightarrow {(a,b)|a,b \in \{-1, 1, 0\}$$
 
 For each character $P_i$: \
 Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain $P_i$: 
