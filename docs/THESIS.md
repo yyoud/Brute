@@ -122,9 +122,7 @@ Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty key
 where d is the domain, and C is the character.
 
 $$
-M^{P_n}: \{(P_i,P_{i+1}) \mid i\in\mathbb{Z}_n\}
-\rightarrow
-\{(a,b) \mid a,b\in\{-1,1,0\}\}
+M^{P_{n}}: \\{(P_i,P_{i+1}) \mid i \in \mathbb{Z}_n\\} \rightarrow \\{(a,b)\mid a,b \in \\{-1,1,0\\}\\}
 $$
 
 For each character $P_i$: \
@@ -157,8 +155,4 @@ areas trapped in the piecewise-linear loop we have.
 To do this, we can use the **Shoelace Formula**:
 
 $$DNA(P^*)=\frac{1}{2}\sum_{i=0}^{L-1}(\lvert x_{P_i} \times y'_{P_{i+1}} - x_{P_{i+1}} \times y'_{P_i} \lvert) $$
-
-$$
-\\{a,b,c\\}
-$$
 
