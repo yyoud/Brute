@@ -49,7 +49,7 @@ All the preset tokens are non-case-sensitive (e.g `"qwerty"` = `"qWeRtY"`)
 Repeating characters or statements shall be marked as `(<char>:<occurances>)`.
 
 I am currently conducting work on expanding repetitions to detect multi-character patterns
-(e.g. `"ahahahah"` $=>$ `"(ah:4)"`).
+(e.g. `"ahahahah"` $\Rightarrow$ `"(ah:4)"`).
 
 ### Preset token repetition
 Preset token repetition occurs when and only when the same preset token appears twice or more in a row.
@@ -114,12 +114,14 @@ and also try to finish theory and start coding before may 5th more or less (afte
 Keyboard patterns are patterns pretty intuitive. a password such as `"dfghjk"`, that creates a line on a keyboard, 
 is not gonna be as secure as an obscure password, scattered over the keyboard.
 
-I propose a way to efficiently detect such patterns, as well as their linearity:
+I propose a way to efficiently detect such patterns, as well as their linearity, using
 **Geometrical Spatial Analysis**.
 
-Let the keyboard be a coordinate system, the origin being the first char of the passsword $P_0$. \
+Let the keyboard be a coordinate system over $\mathbb{Z_n}$the origin being the first char of the passsword $P_0$. \
 Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty keyboard), 
 where d is the domain, and C is the character.
+
+$$M^P_n: {(P_i,P_{i+1} | i \in Z_n} \rightarrow {(a,b)|a,b \in \{-1, 1, 0\}$$
 
 For each character $P_i$: \
 Taken the next char $P_{i+1}$, we conduct a search in the map, using the domain $P_i$: 
