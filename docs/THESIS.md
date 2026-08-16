@@ -122,7 +122,7 @@ Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty key
 where d is the domain, and C is the character.
 
 $$
-M^{P_{n}}: \\{(P_i,P_{i+1}) \mid i \in \mathbb{Z}_n\\} \rightarrow \\{(a,b)\mid a,b \in \\{-1,1,0\\}\\}
+M^{P_{n}}: \\{(P_i,P_{i+1}) \mid i \in \mathbb{Z}_n\\} \longrightarrow \\{(a,b)\mid a,b \in \\{-1,1,0\\}\\}
 $$
 
 For each character $P_i$: \
