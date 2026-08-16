@@ -159,6 +159,6 @@ To do this, we can use the **Shoelace Formula**:
 $$DNA(P^*)=\frac{1}{2}\sum_{i=0}^{L-1}(\lvert x_{P_i} \times y'_{P_{i+1}} - x_{P_{i+1}} \times y'_{P_i} \lvert) $$
 
 $$
-\{a,b,c\}
+\\{a,b,c\\}
 $$
 
