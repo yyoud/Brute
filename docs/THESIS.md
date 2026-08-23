@@ -117,7 +117,7 @@ is not gonna be as secure as an obscure password, scattered over the keyboard.
 I propose a way to efficiently detect such patterns, as well as their linearity, using
 **Geometrical Spatial Analysis**.
 
-Let the keyboard be a coordinate system over $\mathbb{Z_n}$the origin being the first char of the passsword $P_0$. \
+Let the keyboard be a coordinate system over $\mathbb{Z}_n$the origin being the first char of the passsword $P_0$. \
 Let $M(d, C)$ be a domain-relative degree preset vector map (assuming qwerty keyboard), 
 where d is the domain, and C is the character.
 
