@@ -91,7 +91,7 @@ The formula for binary shannon entropy is:
 $$H= -\sum_{i=0}^{L-1} p(P_i) \times log_2(p(P_i))$$
 
 Where: \
-$\displaystyle p(P^*_i)$ is the probability of token $\displaystyle P^*_i$ in the given text.
+$\\displaystyle p(P^*_i)$ is the probability of token $\displaystyle P^*_i$ in the given text.
 
 ### Diversity
 the diversity of a certain character field in a text, is calculated
